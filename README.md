@@ -1,4 +1,4 @@
-# @better-auth/react-native
+# better-auth-react-native
 
 Better Auth integration for **bare React Native** (React Native CLI) applications.
 
@@ -7,9 +7,9 @@ Better Auth integration for **bare React Native** (React Native CLI) application
 ## Installation
 
 ```sh
-npm install @better-auth/react-native react-native-inappbrowser-reborn @react-native-community/netinfo
+npm install better-auth-react-native react-native-inappbrowser-reborn @react-native-community/netinfo
 # or
-yarn add @better-auth/react-native react-native-inappbrowser-reborn @react-native-community/netinfo
+yarn add better-auth-react-native react-native-inappbrowser-reborn @react-native-community/netinfo
 ```
 
 ### iOS – link native modules
@@ -66,7 +66,7 @@ Add the `reactNative` server plugin to your Better Auth instance:
 ```ts
 // auth.ts (server)
 import { betterAuth } from 'better-auth';
-import { reactNative } from '@better-auth/react-native';
+import { reactNative } from 'better-auth-react-native';
 
 export const auth = betterAuth({
   // ...
@@ -87,7 +87,7 @@ export const auth = betterAuth({
 ```ts
 // auth-client.ts
 import { createAuthClient } from 'better-auth/client';
-import { reactNativeClient } from '@better-auth/react-native/client';
+import { reactNativeClient } from 'better-auth-react-native/client';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const client = createAuthClient({
@@ -155,7 +155,7 @@ reactNativeClient({
 Tracks the last authentication method used, stored persistently.
 
 ```ts
-import { lastLoginMethodClient } from "@better-auth/react-native/plugins";
+import { lastLoginMethodClient } from "better-auth-react-native/plugins";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 reactNativeClient({
@@ -183,7 +183,7 @@ const isEmail = client.isLastUsedLoginMethod('email');
 
 ## Differences from `@better-auth/expo`
 
-| Feature            | `@better-auth/expo`         | `@better-auth/react-native`           |
+| Feature            | `@better-auth/expo`         | `better-auth-react-native`            |
 | ------------------ | --------------------------- | ------------------------------------- |
 | Scheme detection   | Auto via `expo-constants`   | Manual via `scheme` option (required) |
 | URL building       | `expo-linking`              | Built-in (no extra dependency)        |

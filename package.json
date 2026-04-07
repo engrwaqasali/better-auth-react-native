@@ -1,14 +1,13 @@
 {
-  "name": "@better-auth/react-native",
+  "name": "better-auth-react-native",
   "version": "1.0.0",
   "description": "Better Auth integration for bare React Native (React Native CLI) applications.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://www.better-auth.com",
+  "homepage": "https://github.com/engrwaqasali/better-auth-react-native",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/better-auth/better-auth.git",
-    "directory": "packages/react-native"
+    "url": "git+https://github.com/engrwaqasali/better-auth-react-native.git"
   },
   "keywords": [
     "auth",
@@ -17,7 +16,7 @@
     "better-auth"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org"
   },
   "sideEffects": false,
   "scripts": {
