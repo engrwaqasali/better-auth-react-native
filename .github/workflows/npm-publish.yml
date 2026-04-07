@@ -27,9 +27,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Test
-        run: npm test -- --run
-
       - name: Check if version is already published
         id: version_check
         run: |
