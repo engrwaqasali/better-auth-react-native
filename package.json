@@ -1,0 +1,94 @@
+{
+  "name": "@better-auth/react-native",
+  "version": "1.0.0",
+  "description": "Better Auth integration for bare React Native (React Native CLI) applications.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://www.better-auth.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/better-auth/better-auth.git",
+    "directory": "packages/react-native"
+  },
+  "keywords": [
+    "auth",
+    "react-native",
+    "typescript",
+    "better-auth"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "vitest",
+    "coverage": "vitest run --coverage --coverage.provider=istanbul"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "default": "./dist/plugins/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ],
+      "client": [
+        "./dist/client.d.ts"
+      ],
+      "plugins": [
+        "./dist/plugins/index.d.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "@better-fetch/fetch": "^1.1.18",
+    "better-call": "^0.4.5",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@better-auth/core": "^1.2.7",
+    "@better-fetch/fetch": "^1.1.18",
+    "@react-native-community/netinfo": "^11.4.1",
+    "better-auth": "^1.2.7",
+    "react-native": "^0.76.0",
+    "react-native-inappbrowser-reborn": "^3.7.0",
+    "tsdown": "^0.12.6",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@better-auth/core": ">=1.0.0",
+    "@react-native-community/netinfo": ">=9.0.0",
+    "better-auth": ">=1.0.0",
+    "react-native": ">=0.73.0",
+    "react-native-inappbrowser-reborn": ">=3.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@react-native-community/netinfo": {
+      "optional": true
+    },
+    "react-native-inappbrowser-reborn": {
+      "optional": true
+    }
+  }
+}
